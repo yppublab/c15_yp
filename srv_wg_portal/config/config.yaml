@@ -17,7 +17,7 @@ backend:
   local_resolvconf_prefix: tun.
 
 advanced:
-  log_level: debug
+  log_level: info
   log_pretty: false
   log_json: false
   start_listen_port: 51820
