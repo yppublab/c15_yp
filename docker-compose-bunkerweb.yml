@@ -6,7 +6,11 @@ services:
     container_name: srv_bunkerweb
     cap_add: [ "NET_ADMIN" ]
     network_mode: host
-    volumes:
-      - ./srv_bunkerweb/conf:/etc/bunkerweb
-      - ./srv_bunkerweb/data:/var/lib/bunkerweb
     dns: [ $SUBNET_SERVERS.$DNS_SRV_IP ]
+    volumes:
+      - bw_conf:/etc/bunkerweb
+      - bw_data:/var/lib/bunkerweb
+
+volumes:
+  bw_conf:
+  bw_data:    
